@@ -1,6 +1,6 @@
 
 pipeline {
-   agent { label 'node1' }
+   agent { label 'centos7' }
    //agent any	
    
    environment { 
