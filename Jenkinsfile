@@ -1,6 +1,6 @@
 
 pipeline {
-   agent { label 'centos7' }
+   agent { label 'ubuntu' }
    //agent any	
    
    environment { 
