@@ -2,6 +2,7 @@
 pipeline {
    
    agent { label 'node1' }
+   //test trigger
    
    environment { 
 	   
