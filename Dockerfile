@@ -2,9 +2,7 @@ FROM node:12
 
 WORKDIR /app
 
-COPY index.js .
-
-COPY *.json ./
+COPY index.js *.json ./
 
 EXPOSE 3000
 
