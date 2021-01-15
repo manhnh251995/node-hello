@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY index.js .
 
-COPY *.json .
+COPY *.json ./
 
 EXPOSE 3000
 
