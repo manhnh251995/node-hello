@@ -31,7 +31,7 @@ pipeline {
       steps {
         sh'''
 	docker login -u manhnh1995 -p $REGISTRY_PASS
-	docker run -d -p 3000:3000 manhnh1995/nodejs:$IMAGE-$BUILD_NUMBER
+	docker run -d -p manhnh1995/nodejs:$IMAGE-$BUILD_NUMBER
 	'''
       }
     }
