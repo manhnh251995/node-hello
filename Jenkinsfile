@@ -8,7 +8,7 @@ pipeline {
       agent { label 'master'}
       steps {
         sh'''
-        docker build -t nodejs:$IMAGE-$BUILD_NUMBER  
+        docker build -t nodejs:$IMAGE-$BUILD_NUMBER .
 	'''
       }
     } 
