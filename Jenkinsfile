@@ -5,17 +5,6 @@ pipeline {
     REGISTRY_PASS = credentials("docker-registry-pass")
   }
   stages {
-    stage('test3') {
-            steps {
-                script {
-                    if (env.BRANCH_NAME == 'main') {
-                        echo 'I only execute on the master branch'
-                    } else {
-                        echo 'I execute elsewhere'
-                    }
-                }
-            }
-        }
     stage("Build Image") { 
       agent { label 'master'}
       steps {
@@ -36,9 +25,9 @@ pipeline {
       }
     }
     stage("deployment to staging"){
-      //when {
-      //   branch 'main' 
-      //}
+      when {
+         branch 'main' 
+      }
       agent { label 'master'}
       steps {
         sh'''
@@ -47,5 +36,17 @@ pipeline {
 	'''
       }
     }
+    stage("deployment to produc"){
+      when {
+        branch "release"
+      }
+      agent { label 'k8s-master'}
+      steps {
+        sh'''
+	docker login -u manhnh1995 -p $REGISTRY_PASS
+	docker run -d manhnh1995/nodejs:$IMAGE-$BUILD_NUMBER
+	'''
+      }
+    } 
    }
 }
