@@ -7,6 +7,6 @@ RUN npm install
 
 EXPOSE 3000
 
-CMD rpm start
+CMD npm start
 
 
