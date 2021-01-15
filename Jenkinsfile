@@ -25,7 +25,7 @@ pipeline {
     }
     stage("deployment to staging"){
       when {
-        branch 'master'
+         branch 'main' 
       }
       agent { label 'master'}
       steps {
