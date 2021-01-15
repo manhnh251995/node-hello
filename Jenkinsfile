@@ -24,9 +24,9 @@ pipeline {
       }
     }
     stage("deployment to staging"){
-      when {
-         branch 'main' 
-      }
+      //when {
+      //   branch 'main' 
+      //}
       agent { label 'master'}
       steps {
         sh'''
