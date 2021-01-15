@@ -26,9 +26,9 @@ pipeline {
     }
     stage("deployment to staging"){
       when {
-         branch 'master' 
+         branch 'staging' 
       }
-      agent { label 'master'}
+      agent { label 'jenkin02'}
       steps {
         sh'''
 	docker login -u manhnh1995 -p $REGISTRY_PASS
