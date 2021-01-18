@@ -4,6 +4,7 @@ pipeline {
   environment {
     IMAGE = 'test'
     REGISTRY_PASS = credentials("docker-registry-pass")
+    SHOPPE = 'nccgm'
   }
   stages {
     stage("Build Image") { 
