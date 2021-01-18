@@ -2,7 +2,7 @@
 #sudo kubectl apply -f deployment.yaml --kubeconfig=/home/manhnh/.kube/config
 # sample value for your variables
 #MYVARVALUE="nginx:latest"
- IMAGE = 'test'
+IMAGE = 'test'
 # read the yml template from a file and substitute the string 
 # {{MYVARNAME}} with the value of the MYVARVALUE variable
 template=`cat "deployment.yml.template" | sed "s/{{IMAGE}}/$IMAGE/g"`
