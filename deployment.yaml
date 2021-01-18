@@ -14,5 +14,5 @@ spec:
       containers:
       - image: manhnh1995/nodejs:$IMAGE-$BUILD_NUMBER
         name: nodejs
-	      ports:
+        ports:
         - containerPort : 3000
