@@ -43,7 +43,7 @@ pipeline {
       }
       agent { label 'master'}
       steps {
-        sh
+        sh'''
 	kubectl delete -f deployment.yaml
 	'''
       }
