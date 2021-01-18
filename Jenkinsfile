@@ -43,12 +43,8 @@ pipeline {
       }
       agent { label 'k8s-master'}
       steps {
-        //sh'''
-	//docker login -u manhnh1995 -p $REGISTRY_PASS
-	//docker run -d manhnh1995/nodejs:$IMAGE-$BUILD_NUMBER
-	//'''
-	sh'''
-	kubectl get nodes
+        sh
+	kubectl delete -f deployment.yaml
 	'''
       }
     } 
