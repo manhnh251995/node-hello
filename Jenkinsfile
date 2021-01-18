@@ -44,6 +44,7 @@ pipeline {
       agent { label 'master'}
       steps {
         sh'''
+	export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
 	sudo kubectl apply -f deployment.yaml
 	'''
       }
