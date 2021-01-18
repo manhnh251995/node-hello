@@ -44,7 +44,7 @@ pipeline {
       agent { label 'master'}
       steps {
         sh'''
-	sudo kubectl delete -f deployment.yaml --kubeconfig=/home/manhnh/.kube/config
+	sudo kubectl apply -f deployment.yaml --kubeconfig=/home/manhnh/.kube/config
 	'''
       }
     } 
