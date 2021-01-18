@@ -44,7 +44,7 @@ pipeline {
       agent { label 'master'}
       steps {
         sh'''
-	./build.sh
+	sudo ./build.sh
 	'''
       }
     } 
