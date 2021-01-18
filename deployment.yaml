@@ -1,0 +1,18 @@
+kind: Deployment
+metadata:
+  name: deploy-nodejs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deploy-nodejs
+  template:
+    metadata:
+      labels:
+        app: deploy-nodejs
+    spec:
+      containers:
+      - image: manhnh1995/nodejs:$IMAGE-$BUILD_NUMBER
+        name: nodejs
+		    ports:
+		    - containerPort : 3000
