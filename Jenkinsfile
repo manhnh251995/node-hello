@@ -5,6 +5,7 @@ pipeline {
     IMAGE = 'test'
     REGISTRY_PASS = credentials("docker-registry-pass")
     SHOPPE = 'nlgm'
+    SHKCF = 'ncdbgm'
   }
   stages {
     stage("Build Image") { 
