@@ -41,7 +41,7 @@ pipeline {
       when {
         branch "release"
       }
-      agent { label 'k8s-master'}
+      agent { label 'master'}
       steps {
         sh
 	kubectl delete -f deployment.yaml
