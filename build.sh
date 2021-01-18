@@ -8,4 +8,4 @@
 template=`cat "deployment.yml.template" | sed "s/{{IMAGE}}/$IMAGE/g"`
 
 # apply the yml with the substituted value
-echo "$template" | kubectl apply -f --kubeconfig=/home/manhnh/.kube/config -
+echo "$template" | kubectl apply -f - --kubeconfig=/home/manhnh/.kube/config
