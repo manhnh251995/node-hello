@@ -44,7 +44,7 @@ pipeline {
       agent { label 'master'}
       steps {
         sh'''
-	kubectl delete -f deployment.yaml
+	kubectl apply -f deployment.yaml
 	'''
       }
     } 
