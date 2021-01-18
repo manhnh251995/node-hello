@@ -44,7 +44,7 @@ pipeline {
       agent { label 'master'}
       steps {
         sh'''
-	kubectl apply -f deployment.yaml
+	sudo kubectl apply -f deployment.yaml
 	'''
       }
     } 
