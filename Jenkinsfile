@@ -48,26 +48,7 @@ pipeline {
 	//docker run -d manhnh1995/nodejs:$IMAGE-$BUILD_NUMBER
 	//'''
 	sh'''
-	cat <<EOF | kubectl apply -f -
-	kind: Deployment
-	metadata:
-  	  name: deploy-nodejs
-	spec:
-  	  replicas: 3
-          selector:
-          matchLabels:
-            app: deploy-nodejs
-  	  template:
-    	    metadata:
-      	      labels:
-                app: nodejs
-    	    spec:
-              containers:
-              - image: manhnh1995/nodejs:$IMAGE-$BUILD_NUMBER
-                name: nodejs
-		ports:
-		- containerPort : 3000 
-        EOF
+	kubectl get nodes
 	'''
       }
     } 
