@@ -17,3 +17,5 @@ spec:
         name: nodejs
         ports:
         - containerPort : 3000
+      imagePullSecrets:
+      - name: regcred  
