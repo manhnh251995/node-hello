@@ -57,9 +57,8 @@ pipeline {
         }
         failure {
             mail to:"nguyenmanh251995@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
-        }
-    }   
-  }  
+        }   
+   }  
 }
 
 
